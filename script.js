@@ -1,5 +1,7 @@
 const textArea = document.querySelector(".textarea");
 const menensaje = document.querySelector(".mensaje"); 
+const texto1 =document.querySelector(".contenedor");
+const nene = document.querySelector(".contenedormuneco");
 
 //La letra "e" es convertida para "enter"
 //La letra "i" es convertida para "imes"
@@ -7,12 +9,30 @@ const menensaje = document.querySelector(".mensaje");
 //La letra "o" es convertida para "ober"
 //La letra "u" es convertida para "ufat"
 
+function validarTexto(){
+
+    let textoEscrito = document.querySelector(".textarea").value;
+    let validador = textoEscrito.match(/^[a-z ]*$/);
+
+    if(!validador || validador === 0){
+
+        alert("Solo son permitidas letras en minúsculas y sin acentos");
+        location.reload();
+        return true;
+        boxMsj.style.display = "none";
+        msjVacio.style.display = "flex";
+    }
+}
+
+
 function btnEncriptar(){
+    if (!validarTexto());
     const textoEncriptado = encriptar(textArea.value);
     menensaje.value = textoEncriptado
     textArea.value = "";
-    menensaje.style.backgroundImage = "none"
     copyButton.style.display = "block"
+    ocultarTextos();
+    ocultarnene();
 }
 
 function encriptar(stringEncriptada){
@@ -63,4 +83,14 @@ function copyText() {
     }, 2000);
 }
 
+function ocultarTextos(){
+    let texto1 = document.getElementById("h3p");
+    let texto2 = document.getElementById("pp1");
+    console.log(texto1);
+    texto1.textContent ="";
+    texto2.textContent ="";
+}
+function ocultarnene(){
+    nene.classList.add("ocultar")
+}
 

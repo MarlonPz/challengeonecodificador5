@@ -20,7 +20,6 @@ main{
     font-size: 2.5em;
     left: 170px;
     top: 25px;
-    font-family: 'Poppins', sans-serif;
 }
 /*Fin Header*/
 /*Divs*/
@@ -45,7 +44,7 @@ main{
     filter:blur(20px);
     z-index: -1;
     border-radius: 55px;
-}
+} 
 
 /*Fin Div*/
 #parrafo1{
@@ -94,10 +93,11 @@ input {
 
 .textarea{
     position: relative;
+    background-color: transparent;
     bottom: -30px;
     left: 75px;
-    width:400px;
-    height:100px;
+    width:500px;
+    height:150px;
     color: #292D44;
     border: none;
     outline: none;
@@ -160,7 +160,7 @@ outline: transparent;
     position: absolute;
     top: 320px;
     left: 250px;
-    background-color: #CACCE2;
+    background-color: #FFFFFF;
     color: #1944D8;
     width: 150px;
     height: 40px;
@@ -189,31 +189,38 @@ outline: transparent;
     z-index: -1;
     box-shadow: 0px 1px 8px 1px #C5C0C0;
 }
+.contenedormuneco{
+    position: absolute;
+    left: 230px;
+    top: 205px;
+    
+}
+.contenedor-parrafo{
+    position: absolute;
+    box-sizing: border-box;
+    left: 230px;
+    top: 50px;
+    color: white;
+}
+.contenedor-parrafo h3{
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+.contenedor-parrafo p{
+    font-size: 0.6em;
+    padding: 5px;
+
+}
 .mensaje{
-background: transparent;
-background-image: url(../img/muñecoconlupa.png);
-background-repeat: no-repeat;
-background-size: 200px;
-background-position: center;
+background-color: transparent;
 color: white;
-margin-left: 150px;
-margin-top: 16.2px;
+margin-left: 100px;
+margin-top: 50px;
 padding-left: 80px;
-width: 225px;
-height: 90.9vh;
-position: fixed;
+width: 50vh;
+height: 48.9vh;
 border: none;
 resize: none;
-}
-.mensaje::placeholder{
-    position: absolute;
-    top: 15px;
-    color: white;
-    font-size: 1.2em;
-}
-.mensaje:focus{
-    outline: none;
-    
 }
 /*Fin Contenedor 2*/
 /*Footer*/
@@ -228,6 +235,9 @@ footer {
     font-size: 0.6em;
     right: 45px;
 }
+#textfooter{
+    text-align: center;
+}
 .Logo_Git{
     position: relative;
     width: 80px;
@@ -236,3 +246,86 @@ footer {
     top: -48px;
 }
 /*Fin Footer*/ 
+.ocultar{
+    display: none;
+}
+/*responsive*/
+@media(max-width: 575.98px) and (orientation:portrait){ 
+    /*Contenedor 1*/
+    #titulo{
+        left: 90px;   
+    }
+    .Contenedor1{
+        width: 50vh;
+        height: 55vh;
+        left: 35px;
+    }
+    .icono-exclamacion{
+        left: 80px;
+    }
+    #parrafo1{
+        left: 95px;
+    }
+    .textarea{
+        width: 40vh;
+        left: 40px;
+        
+    }
+    .btn-encriptar{
+        top: 360px;
+        left: 25px;
+    }
+    .btn-desencriptar{
+        top: 360px;
+        left: 190px;
+    }
+    /*FinContenedor 1*/
+    /*Contenedor 2*/
+    .Contenedor2{
+        width: 49vh;
+        left: -225px;
+        top: 280px;
+    }
+    #copyButton{
+        left: 25px;
+        top: 450px;
+        width: 100px;
+    }
+
+    .mensaje
+    {
+    margin-left: -50px;
+    margin-top: 220px;
+    padding-left: 80px;
+    width: 40vh;
+    position: fixed;
+    }
+    .mensaje::placeholder{
+        right: 150px;
+        top: 80px;
+        color: white;
+        font-size: 1em;
+        
+    }
+    .mensaje:focus{
+        outline: none;
+        
+    }
+/*FinContenedor 2*/
+    footer{
+        width: auto;
+        bottom: -250px;
+    }
+    #textfooter{
+        position: relative;
+        left: 85px;
+        top: -115px;
+    }
+    .Logo_Git{
+        left: 80px;
+        top: -140px;
+    }
+}
+/*Table*/
+@media(min-width: 575.98px) and (max-width: 760px){
+}
