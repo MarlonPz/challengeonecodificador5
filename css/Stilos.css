@@ -171,9 +171,9 @@ outline: transparent;
     line-height: 1px;
     cursor: pointer;
 }
-/* #copyButton:hover{
+#copyButton:hover{
     background-color:  rgba(255, 255, 255, 0.822);
-} */
+}
 /*Fin Botones*/
 /*Contenedor 2*/
 .Contenedor2{
@@ -310,6 +310,23 @@ footer {
     .mensaje:focus{
         outline: none;
         
+    }
+    .contenedormuneco{
+        top: 343px;
+        left: 150px;
+    }
+    .contenedor-parrafo{
+        top: 270px;
+        left: 50px;
+    }
+    .contenedor-parrafo h3{
+        padding: 5px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .contenedor-parrafo p{
+        font-size: 0.6em;
+        padding: 5px;
+    
     }
 /*FinContenedor 2*/
     footer{
